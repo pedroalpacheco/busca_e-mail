@@ -17,6 +17,8 @@ email_re = re.compile(r'([\w\.,]+@[\w\.,]+\.\w+)')
 link_re = re.compile(r'href="(.*?)"')
 
 
+site = raw_input("Digite o site:")
+
 def crawl(url):
 
     result = set()
@@ -44,7 +46,7 @@ def crawl(url):
     return result
 
 if __name__ == '__main__':
-    emails = crawl('http://www.qualquerst.com.br/')
+    emails = crawl(site)
 
     print("\nScrapped e-mail addresses:")
     for email in emails:
